@@ -1,0 +1,265 @@
+.content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+ul {
+  margin: 0;
+  padding-right: 32px;
+}
+
+/* Style the list items */
+ul li {
+  border-color: #cfc7c7;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  margin-top: 5px;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  list-style-type: none;
+  transition: 0.2s;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #ffffff;
+  color: #ff0000;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.edit {
+  position: absolute;
+  right: 40px;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.edit:hover {
+  background-color: #b7d6db;
+  color: white;
+}
+
+.close:hover {
+  background-color: #ffa2a2;
+  color: white;
+}
+
+/* Style the header */
+.header {
+  margin-left: 35px;
+  width: 90%;
+  border-color: #cfc7c7;
+  border-style: solid;
+  border-width: 1px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px 40px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+
+.header:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+.row{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+}
+input {
+  
+  float: left;
+  border-color: #cfc7c7;
+  border-style: solid;
+  border-width: 1px;
+  width: 100%;
+  padding: 10px 5px 10px 5px;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.add-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  float: left;
+  padding-left: 50%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 50%;
+  width: 25%;
+  background: rgb(36,163,182);
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.add-new {
+  padding: 10px;
+  width: 25%;
+  background: rgb(36,163,182);
+  color: #ffffff;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+  margin-left: 14rem;
+  transition: 0.5s ease-in-out;
+}
+span.add-new :hover{
+  transition: 0.5s ease-in-out;
+  background-color: rgb(21, 105, 118);
+}
+.add-back {
+  padding: 10px;
+  width: 55%;
+  background: rgb(36,163,182);
+  color: #ffffff;
+  float: left;
+  margin-top: 20px;
+  margin-left: -80px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  border-radius: 0;
+}
+
+.add-button:hover {
+  transition: 0.5s ease-in-out;
+  background-color: rgb(21, 105, 118);
+}
+
+.listButton {
+  display: flex;
+  justify-content: space-evenly;
+  height: 3em;
+  margin: 1em;
+}
+
+.btn-filter {
+  transition: 0.2s ease-in-out;
+  background-color: rgb(36,163,182);
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-shadow: rgba(255, 255, 255, 0.4);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: system-ui, 'Segoe UI', 'Liberation Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 10px 120px 10px 90px;
+  position: relative;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+  width: 6em;
+}
+
+.btn-filter:hover,
+.btn-filter:focus {
+  transition: 0.2s ease-in-out;
+  background-color: rgb(21, 105, 118);
+}
+
+.btn-filter:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
+}
+
+.btn-filter:active {
+  background-color: #002646;
+  box-shadow: none;
+}
+
+.kolom-edit {
+  margin-bottom: 1rem;
+}
+.kolom-edit button{
+  border: 1px solid ;
+  border-radius: 1px;
+  box-shadow: rgba(76, 76, 76, 0.4);
+  margin-left: 5px;
+}
+.kolom-edit button :hover{
+  background-color: #6a6a6a;
+}
+
+.pensil {
+  color: #f7bf32;
+}
+
+.sampah {
+  color: #d9384c;
+}
+h2{
+  text-align: center;
+  align-items: center;
+  display: flex;
+justify-content: center;
+}
